@@ -1,0 +1,92 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #f6f6f6;
+  height: 100%;
+  font-size: 16px;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', sans-serif;
+}
+
+small {
+  /* 14px ~ 12.25px */
+  font-size: 0.875rem;
+}
+
+pre {
+  margin: 0;
+  padding: 1em; 
+}
+
+img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+textarea {
+  resize: none;
+}
+
+/* STYLING */
+.container {
+  margin-top: 50px;
+}
+
+.heading {
+  font-size: 3em
+}
+
+.welcome {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.nav-btns {
+  margin-top: 1em;
+  letter-spacing: 0.1em;
+}
+
+form {
+  margin: 32px auto;
+}
+
+.error-msg {
+  padding: 0.5em 0.5em 0;
+}
+
+.character-count {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+}
+
+.footer-btns {
+  text-align: right;
+}
+
+.form-btns {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-btns > button:not(:last-of-type) {
+  margin-right: 0.5em;
+}
+
+div.modal-footer {
+  border: 0!important
+}
