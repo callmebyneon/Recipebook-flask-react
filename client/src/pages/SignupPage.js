@@ -30,11 +30,11 @@ const SignupPage = () => {
         .then(data => {
           console.log(data)
           if (!data.success)
-            setServerResponse(data?.message)
+            setServerResponse(data?.msg)
         })
         .catch((err) => {
           console.error(err)
-          setServerResponse(err?.message)
+          setServerResponse(err?.msg)
         })
         
       reset()
