@@ -47,7 +47,7 @@ class SignUp(Resource):
     db_user = User.query.filter_by(username=username).first()
 
     if db_user is not None:
-      return jsonify({ "success": False, "message": f"User with username `{username}` already exists." })
+      return make_response(jsonify({ "success": False, "msg": f"User with username `{username}` already exists." }), 400)
 
     new_user = User(
       username = data.get('username'),
@@ -56,7 +56,7 @@ class SignUp(Resource):
     )
     new_user.save()
 
-    return make_response(jsonify({ "message": "User create successfully" }), 201)
+    return make_response(jsonify({ "msg": "User create successfully" }), 201)
 
 
     
@@ -84,6 +84,12 @@ class Login(Resource):
       # response.set_cookie("refresh_token", refresh_token)
 
       return response
+    
+    return make_response(
+      jsonify({
+        "msg": "Incorrect account information"
+      }), 400
+    )
 
 
 @auth_ns.route('/refresh')
