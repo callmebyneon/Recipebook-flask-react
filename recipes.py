@@ -21,7 +21,7 @@ recipe_model = recipe_ns.model(
 @recipe_ns.route('/hello')
 class HelloResource(Resource):
   def get(self):
-    return { "message": "Hello World" }
+    return { "msg": "Hello World" }
 
 @recipe_ns.route('/recipes')
 class RecipesResource(Resource):

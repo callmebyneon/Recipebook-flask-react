@@ -18,7 +18,7 @@ class APITestCase(unittest.TestCase):
     hello_response = self.client.get('/recipe/hello')
     json = hello_response.json
 
-    self.assertEqual(json, { "message": "Hello World" })
+    self.assertEqual(json, { "msg": "Hello World" })
 
 
 
